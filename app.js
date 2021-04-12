@@ -168,7 +168,6 @@ function result() {
 
 }
 
-
 function reset(){
   
   window.location.reload();
