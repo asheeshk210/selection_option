@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            padding: 2%;
+            text-align: center;
+        }
+        .address{
+            padding: 5%;
+            margin: 5%;
+            background-color: rgb(148, 142, 214);
+        }
+        select{
+            outline: none;
+            border: none;
+            
+        }
+        label{
+            color:white;
+        }
+        .modal{
+          text-align: left;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1>Enter your address</h1>
+          <div class="row address">
+              
+              <div class="col-sm-4">
+                <label class="form-check-label" for="exampleCheck1">Enter State</label><br>
+                <select class="form-select" aria-label="Default select example" id="slt1" onchange="state('slt1','slt2')">
+                    <option selected>Please choose state </option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttrakhand</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Gujarat</option>
+                    <option>Maharashtra</option>
+                  </select>  
+              </div>
+              <div class="col-sm-4">
+                <label class="form-check-label" for="exampleCheck1">Enter District</label><br>
+                <select class="form-select" aria-label="Default select example" id="slt2" onchange="district('slt2','slt3')">
+                    <option selected>Please choose district</option>
+                    
+                  </select>
+                  
+              </div>
+              <div class="col-sm-4">
+                <label class="form-check-label" for="exampleCheck1">Enter City</label><br>
+                <select class="form-select" aria-label="Default select example" id="slt3" onchange="forButton()">
+                    <option selected>Please choose city</option>
+                    
+                  </select>  
+              </div>
+          </div>
+          <button type="submit" class="btn btn-success" onclick="result()" data-toggle="modal"
+          data-target="#mydata" disabled id=sub>Submit</button>
+      </div>
+
+
+      <!-- **********************modal************************************** -->
+      <div class="modal fade" id="mydata" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4>You successfully entered your data:</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="x"></p>
+                    <p id="y"></p>
+                    <p id="z"></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="reset" onclick="reset()">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <script src="app.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
