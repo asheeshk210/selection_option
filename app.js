@@ -167,3 +167,9 @@ function result() {
   document.getElementById("z").innerHTML = "your city is :" + c.value;
 
 }
+
+
+function reset(){
+  
+  window.location.reload();
+}
